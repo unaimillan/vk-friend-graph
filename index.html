@@ -14,15 +14,25 @@
         // API initialization succeeded
         // Your code here
         console.log('Success');
-        VK.api("friends.get", {"count": "1", "v": "5.126"}, function (data) {
-            console.log(data);
-        });
+        VK.callMethod("showSettingsBox", 2);
         console.log('Success proccessed');
     }, function () {
         // API initialization failed
         // Can reload page here
         console.log('Failure')
     }, '5.126');
+</script>
+
+<script type="text/javascript">
+    function getFriendsByID(user_id) {
+        VK.api("friends.get", {
+            "user_id": user_id === undefined ? 0 : user_id,
+            "count": "1",
+            "v": "5.126"
+        }, function (data) {
+            console.log(data);
+        });
+    }
 </script>
 </body>
 </html> 
