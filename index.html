@@ -8,19 +8,25 @@
     <script src="https://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
 </head>
 <body>
-
+<div style="text-align: center"><h1>Hello world!</h1></div>
 <script type="text/javascript">
     window.onload = VK.init(function () {
         // API initialization succeeded
         // Your code here
         console.log('Success');
-        VK.callMethod("showSettingsBox", 2);
+        console.log(requestPermissions())
         console.log('Success proccessed');
     }, function () {
         // API initialization failed
         // Can reload page here
         console.log('Failure')
     }, '5.126');
+</script>
+
+<script type="text/javascript">
+    function requestPermissions(){
+        VK.callMethod("showSettingsBox", 2);
+    }
 </script>
 
 <script type="text/javascript">
