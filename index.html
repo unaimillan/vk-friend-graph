@@ -5,23 +5,24 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>VK Social graph</title>
         <!-- <link rel="stylesheet" type="text/css" href="./css/default.css" /> -->
+        <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
     </head>
     <body>
-        <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
         <script type="text/javascript">
             VK.init(function() {
                // API initialization succeeded
                // Your code here
                console.log('Success');
-               VK.callMethod("showSettingsBox", 2);
-               VK.api("friends.get", {"count": "0", "v":"5.73"}, function (data) {
+               VK.api("friends.get", {"count": "1", "v":"5.126"}, function (data) {
                    console.log(data);
                 });
+               console.log('Success proccessed');
             }, function() {
                // API initialization failed
                // Can reload page here
                console.log('Failure')
           }, '5.126');
+        };
           </script>
     </body>
 </html> 
