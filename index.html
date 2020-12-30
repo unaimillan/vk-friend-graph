@@ -14,8 +14,9 @@
         // API initialization succeeded
         // Your code here
         console.log('Success');
-        console.log(requestPermissions())
-        console.log('Success proccessed');
+        requestPermissions();
+        console.log('Success processed');
+        getFriendsByID();
     }, function () {
         // API initialization failed
         // Can reload page here
@@ -24,7 +25,7 @@
 </script>
 
 <script type="text/javascript">
-    function requestPermissions(){
+    function requestPermissions() {
         VK.callMethod("showSettingsBox", 2);
     }
 </script>
@@ -34,7 +35,8 @@
         VK.api("friends.get", {
             "user_id": user_id === undefined ? 0 : user_id,
             "count": "1",
-            "v": "5.126"
+            "v": "5.126",
+            "test_mode": 1
         }, function (data) {
             console.log(data);
         });
