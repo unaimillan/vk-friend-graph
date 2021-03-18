@@ -1,5 +1,7 @@
 # VK social graph
 
+\>> **Abandoned due to lack of knowledge and motivation(**
+
 Simple JS webapp built using [VK Javascript SDK](https://vk.com/dev/Javascript_SDK) for visualization of friend's graph for the given person
 
 ## Usage
